@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário 🎈🎁</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script src="./assets/scripts/html2canvas.js">
+    </script>
+</head>
+
+<body onclick="somParabens.play()" title="Toque em mim para ouvir os parabéns">
+
+    <section class="container" id="htmltoimage">
+        <div class="content">
+            <div id="text">
+                <h1>Parabéns, <span id="aniversariante">Aniversariante</span></h1>
+                <h2 id="emojis">cadeia de emojis</h2>
+                <p id="fraseAniversario">frase de parabéns</p>
+                <p id="felizaniversario" title="Clique em mim para tocar os parabéns">Feliz
+                    Aniversário!</p>
+            </div>
+        </div>
+    </section>
+    <!-- href="https://api.whatsapp.com/send?text=Conheça meu CertifiCARD através do LINK: -->
+    <footer>
+        <button onclick="downloadimage()" id="download">
+            <p>DOWNLOAD</p>
+        </button>
+       
+        <p>Criado por
+            <a href="https://github.com/davidtmasin" target="_blank" title="Olá, eu sou um easter egg 🥚">
+                David Teixeira
+            </a>.
+        </p>
+
+    </footer>
+    <script>
+        const somParabens = new Audio();
+        somParabens.src = 'parabens-da-xuxa.m4a';   
+    </script>
+    <script src="./assets/scripts/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,324 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(168, 167, 167, 0.6)
+}
+
+.botao {
+    position: relative;
+    top: -120px;
+    right: -50px;
+    color: #fff
+}
+
+.CardT {
+    position: relative;
+    width: 350px;
+    height: 450px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 4s
+}
+
+.CardT:hover {
+    transform: perspective(2500px) rotate(1deg);
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .15), 0 10px 100px rgba(0, 0, 0, 0.3)
+}
+
+.CardT:hover .Frente {
+    transform: rotateY(-160deg)
+}
+
+.CardT:hover .Texto-frente {
+    display: none
+}
+
+.CardT:hover .wrap-deco {
+    display: none
+}
+
+.CardT:hover .wrap-decotwo {
+    display: none
+}
+
+.CardT:hover .plate {
+    display: none
+}
+
+.Frente {
+    position: relative;
+    background-color: #fff6f6;
+    width: 350px;
+    height: 450px;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .13), 30px 0 50px rgba(0, 0, 0, 0.1);
+    transition: .4s
+}
+
+.happy,
+.you {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    backface-visibility: hidden;
+    font-size: 30px
+}
+
+.happy {
+    top: 230px
+}
+
+.you {
+    top: 200px
+}
+
+.Bday {
+    position: relative;
+    font-family: Arial;
+    font-size: 30px;
+    text-align: center;
+    top: 213px
+}
+
+.wrap-deco {
+    position: absolute;
+    top: -230px;
+    left: -170px
+}
+
+.decoração {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    border: 3px solid #333;
+    border-radius: 50%
+}
+
+.decoração:before,
+.decoração:after,
+.decoraçãotwo:before,
+.decoraçãotwo:after,
+.decoraçãothree:before,
+.decoraçãothree:after {
+    content: "";
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    width: 0;
+    height: 0
+}
+
+.decoração:before {
+    border-top: 40px solid #212dd6;
+    top: 297px;
+    left: 210px;
+    transform: rotate(-5deg)
+}
+
+.decoração:after {
+    border-top: 40px solid #f4d35e;
+    top: 288px;
+    left: 260px;
+    transform: rotate(-17deg)
+}
+
+.decoraçãotwo:before {
+    border-top: 40px solid #00f5d4;
+    top: 268px;
+    left: 315px;
+    transform: rotate(-10deg)
+}
+
+.decoraçãotwo:after,
+.decoraçãothree:after {
+    border-top: 40px solid #9725a1;
+    top: 238px;
+    left: 355px;
+    transform: rotate(-40deg)
+}
+
+.wrap-decotwo {
+    transform: scaleX(-1);
+    position: absolute;
+    top: -230px;
+    left: 530px
+}
+
+.decoraçãothree:before {
+    border-top: 40px solid #00bbf9;
+    top: 268px;
+    left: 315px;
+    transform: rotate(-10deg)
+}
+
+.plate {
+    position: absolute;
+    width: 130px;
+    height: 5px;
+    background-color: #00bbf9;
+    left: 110px;
+    top: 213px
+}
+
+.cake {
+    position: absolute;
+    overflow: hidden;
+    width: 100px;
+    height: 50px;
+    background-color: #241aaa;
+    border-radius: 10px 10px 0 0;
+    top: -50px;
+    left: 15px;
+    box-shadow: inset 0 -15px #f9c74f, inset 0 15px #432818
+}
+
+.cake:before {
+    content: "";
+    position: absolute;
+    background-color: #432818;
+    width: 10px;
+    height: 20px;
+    top: 5px;
+    border-radius: 20px;
+    box-shadow: 10px 5px #f15bb5, 20px 0 #432818, 30px 2px #f15bb5, 40px 5px #432818, 50px 5px #f15bb5, 60px 0 #432818, 70px 5px #f15bb5, 80px 5px #432818, 90px 5px #f15bb5
+}
+
+.plate:before {
+    content: "";
+    position: absolute;
+    background: repeating-linear-gradient(-45deg, #9b5de5, #9b5de5 3px, #00f5d4 3px, #00f5d4 6px);
+    width: 7px;
+    height: 25px;
+    top: -75px;
+    left: 61px
+}
+
+.plate:after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 5px;
+    background-color: #333;
+    top: -80px;
+    left: 64px
+}
+
+.flame {
+    position: absolute;
+    background-color: #fb5607;
+    border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+    transform: rotate(-45deg);
+    width: 15px;
+    height: 15px;
+    opacity: .7;
+    top: -93px;
+    left: 57px
+}
+
+.carddentro {
+    position: absolute;
+    background-color: #fff;
+    width: 350px;
+    height: 450px;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2)
+}
+
+.texto-dentro {
+    position: relative;
+    top: -160px;
+    transform: scale(0.7)
+}
+
+.desejo {
+    position: relative;
+    top: -50px;
+    margin: 30px
+}
+
+p {
+    font-family: 'Brush Script MT';
+    color: #333;
+    font-size: larger;
+    font-size: 20px
+}
+
+.nome {
+    margin-left: 150px
+}
+
+.heart {
+    height: 30px;
+    width: 30px;
+    background: #f20044;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #f20044;
+    animation: heart 0.6s linear infinite;
+    top: -500px;
+    right: -270px;
+}
+
+.heart:before {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background: #f20044;
+    top: -50%;
+    border-radius: 50px;
+    box-shadow: -10px -10px 90px #f20044;
+}
+
+.heart:after {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background: #f20044;
+    right: -50%;
+    border-radius: 50px;
+    box-shadow: 10px 10px 90px #f20044;
+}
+
+.heart2 {
+    height: 30px;
+    width: 30px;
+    background: #f20044;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #f20044;
+    animation: heart 0.6s linear infinite;
+    top: -530px;
+    right: -50px;
+}
+
+.heart2:before {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background: #f20044;
+    top: -50%;
+    left: 0;
+    border-radius: 50%;
+    box-shadow: -10px -10px 90px #f20044;
+}
+
+.heart2:after {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background: #f20044;
+    top: 0;
+    right: -50%;
+    border-radius: 50%;
+    box-shadow: 10px 10px 90px #f20044;
+}
